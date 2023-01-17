@@ -330,7 +330,7 @@ header{
     }
 }
 
-@media (max-width: 340px){
+@media (max-width: 480px){
     :root{
         --big-font: 1.7rem;
         --medium-font: 1.1rem;
