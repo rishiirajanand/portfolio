@@ -24,7 +24,7 @@ darkmode.onclick = ()=>{
 //auto typing 
 let type =new Typed('.auto-type',{
     strings : ['App Developer','Website Developer','Flutter Developer','backend Developer','Java Developer','C++ Developer'],
-    typeSpeed: 55,
-    backSpeed: 55,
+    typeSpeed: 30,
+    backSpeed: 30,
     loop: true
 });
