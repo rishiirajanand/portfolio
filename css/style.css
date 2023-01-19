@@ -361,7 +361,6 @@ header{
         --medium-font: 1.1rem;
     }
     .home{
-        background-color: brown;
         min-height: 50vh;
         padding-bottom: 0px;    
     }
@@ -392,7 +391,7 @@ header{
         text-align: center;
     }
     .contact p{
-        width: 385px;
+        width: 390px;
     }
     .about .heading hr{
         margin: auto;
