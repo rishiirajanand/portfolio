@@ -13,11 +13,12 @@
 :root{
     --main-color: #22cf91;
     --bg-color: rgb(10,25,47);
-    --text-color: #fff;
+    --text-color: rgb(157, 150, 167);
     --hover: #22cf91;
     --big-font: 3.2rem;
     --medium-font: 1.8rem;
     --p-font: 0.941rem;
+    --name-color: rgb(211, 210, 255);
 
 }
 html{
@@ -33,6 +34,7 @@ body{
 body.active{
     --text-color: rgb(10,25,47);
     --bg-color: #fff;
+    --name-color: rgb(10,25,47);
 }
 
 section{
@@ -111,12 +113,15 @@ header{
     color: #22cf91;
 }
 .home-text h1{
+    color: var(--name-color);
     font-size: var(--big-font);
 }
 .home-text h2{
     font-size: 1.1rem;
     font-weight: 400;
+    font-family: monospace;
 }
+
 .home-text p{
     font-size: var(--p-font);
     font-weight: 400;
@@ -127,6 +132,7 @@ header{
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
+    padding-right: 3rem;
     
 }
 
@@ -146,8 +152,8 @@ header{
     display: inline-block;
     background: var(--bg-color);
     color: var(--text-color);
-    padding: 0.7rem 1.3rem;
-    border: 1px solid #22cf91;
+    padding: 0.5rem 1.1rem;
+    border: 2px solid #22cf91;
 
 }
 .btn:hover{
@@ -161,6 +167,7 @@ header{
     margin-top: 8px;
 }
 .heading h2{
+    color: var(--name-color);
     font-size: 30px;
 }
 
@@ -171,6 +178,7 @@ header{
     margin-top: 2rem;
 }
 .about-img img{
+    margin-left: 8rem;
     width: 50%;
     border-radius: 0.3rem;
 }
@@ -180,22 +188,27 @@ header{
     font-weight: 400;
     text-align: justify;
 }
-.information{
-    margin: 1rem 0 1.4rem;
+
+/* experience */
+.info{
+    margin: 2rem 0;
 }
-.information .info-box{
+.experience{
     display: flex;
-    align-items: center;
-    margin-bottom: 1.4rem;
+    flex-direction: row;
+    margin: 1rem 0
 }
-.information .info-box .bx{
-    font-size: 22px;
+.experience .bx{
+    color: #22cf91;
 }
-.information .info-box span{
-    font-weight: 400;
-    margin-left: 1rem;
+
+.section-1{
+    flex: 1;
 }
-  /* <!-- ============================ portfolio  ===================== --> */
+.section-2{
+    flex: 1;
+}
+/* <!-- ============================ portfolio  ===================== --> */
 
   .portfolio-content {
     display: grid;
@@ -226,6 +239,11 @@ header{
   .contact h2 {
     font-size: 1.5rem;
     margin-bottom: 1.6rem;
+  }
+  .contact p{
+    width: 501px;
+    text-align: center;
+    margin-bottom: 2rem;
   }
   .contact-social a i{
     color: rgb(10, 26, 208);
@@ -316,6 +334,7 @@ header{
     }
     .home .social{
         margin-top: 0;
+        padding-right: 0;
     }
     .home-text{
         padding-left: 1.4rem;
@@ -328,6 +347,12 @@ header{
         display: flex;
         justify-content: center;
     }
+    .about-img img{
+        margin: 0;
+    }
+    .contact p{
+        width: 486px;
+    }
 }
 
 @media (max-width: 480px){
@@ -335,7 +360,14 @@ header{
         --big-font: 1.7rem;
         --medium-font: 1.1rem;
     }
-
+    .home{
+        background-color: brown;
+        min-height: 50vh;
+        padding-bottom: 0px;    
+    }
+    .home-text{
+        margin-top: 4rem;
+    }
     .home-text span{
         font-size: 1rem;
     }
@@ -343,18 +375,28 @@ header{
         font-size: 0.9rem;
         font-weight: 500;
     }
+    
+    .home .social{
+        margin-top: 3rem;
+        padding-right: 0;
+    }
+    .about-img img{
+        margin: 0;
+        margin-top: 2rem;
+        width: 60%;
+    }
+    .experience{
+        font-size: 13px;
+    }
     .about .heading{
         text-align: center;
+    }
+    .contact p{
+        width: 385px;
     }
     .about .heading hr{
         margin: auto;
         width: 11rem;
-    }
-    .information .info-box span{
-        font-size: 1rem;
-    }
-    .home .social{
-        margin-top: 0;
     }
     .portfolio-content{
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
