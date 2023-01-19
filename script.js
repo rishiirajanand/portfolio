@@ -11,12 +11,20 @@ menu.onclick = ()=>{
 let darkmode = document.querySelector('#darkmode');
 
 darkmode.onclick = ()=>{
-    if(darkmode.classList.contains('bx-sun')){
-        darkmode.classList.replace('bx-sun', 'bx-moon');
+    if(darkmode.classList.contains('bxs-sun')){
+        darkmode.classList.replace('bxs-sun', 'bxs-moon');
         document.body.classList.add('active');   
     }
     else{
-        darkmode.classList.replace('bx-moon', 'bx-sun');
+        darkmode.classList.replace('bxs-moon', 'bxs-sun');
         document.body.classList.remove('active');
     }
 }
+
+//auto typing 
+let type =new Typed('.auto-type',{
+    strings : ['App Developer','Website Developer','Flutter Developer','backend Developer','Java Developer','C++ Developer'],
+    typeSpeed: 55,
+    backSpeed: 55,
+    loop: true
+});
