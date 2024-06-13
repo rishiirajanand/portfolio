@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import About from './Components/About'
 import Technologies from './Components/Technologies'
+import Experience from './Components/Experience'
+import Project from './Components/Project'
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           < Hero /> 
           < About />
           < Technologies />
+          < Experience />
+          < Project />
         </div>
 
 
